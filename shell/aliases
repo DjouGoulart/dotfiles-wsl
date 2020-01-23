@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+##########################################################################
+## NAVIGATION
+alias ~="cd ~"
+
+alias ~stg="cd ${STORAGE}"
+alias ~dwl="cd ${DOWNLOADS}"
+alias ~prj="cd ${PROJECTS}"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias ....."cd ../../../.."
+alias -- -="cd -"
+
+##########################################################################
+## BASH COMMANDS
+
+# Enable aliases to be sudo’ed
+alias sudo="sudo "
+
+# Create and notify any necessary parent folder
+alias mkdir="mkdir -pv"
+
+# colorls overwrite
+if type colorls >/dev/null; then
+  alias ll="colorls -l -A --sd"
+  alias ls="colorls -A --sd"
+  alias ld="colorls -d -A"
+  alias lf="colorls -f -A"
+fi
+
+# Copy with progress bar
+alias cpv="rsync -ah --info=progress2"
+
+# Show my external ip
+alias myip="curl ipinfo.io/ip"
+
+##########################################################################
+## WINDOWS COMMANDS
+alias ipconfig="cmd.exe /c ipconfig"
+
+##########################################################################
+## CONFIG FILES
+
+# Reloads the zshrc file
+alias zshrel="source ~/.zshrc && echo ZSH config reloaded"
+
+alias zshrced="${EDITOR} ~/.zshrc"
+alias exportsed="${EDITOR} ~/.shell/exports"
+alias aliasesed="${EDITOR} ~/.shell/aliases"
+alias functionsed="${EDITOR} ~/.shell/functions"
+alias p10ked="${EDITOR} ~/.p10k.zsh"
+
+##########################################################################
+## PROGRAMS
+alias xsrv="'${WIN_PF}/Mobatek/MobaXterm/MobaXterm.exe' & "
+alias chrome="cmd.exe /c start chrome"
+alias chromei="cmd.exe /c start chrome -incognito"
+alias explorer="cmd.exe /c start explorer ."
+
