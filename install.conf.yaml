@@ -4,6 +4,7 @@
     ~/.dotfiles: ''
     ~/.config/shell: shell
     ~/.config/zsh: zsh
+    ~/.zshenv: zsh/zshenv
     ~/.config/git: git
     ~/.config/conda: conda
     ~/.config/jupyter: jupyter
