@@ -1,3 +1,12 @@
-- clean: []
-- link: {}
-- shell: []
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.config/shell: shell
+    ~/.config/zsh: zsh
+    ~/.config/git: git
+    ~/.config/conda: conda
+    ~/.config/jupyter: jupyter
+
+- shell:
+    - git submodule update --init --recursive

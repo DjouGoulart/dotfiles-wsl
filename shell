@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+## Create a new directory and enter it
+function mkcd() {
+   mkdir -p "$@" && cd "$_";
+}
+
+## Enter an directory and ls
+function cdls() {
+  cd $1 && ls
+}
+
+## Check if is WSL
+function is_wsl() {
+  return $(grep -q Microsoft /proc/version)
+}
+
+#function get_python_last_version() {
+#  local latest=$(asdf latest python)
+#  return 3.8
+#}
