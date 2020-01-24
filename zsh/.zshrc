@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="${HOME}/.config/oh-my-zsh"
+export ZSH="${HOME}/.config/zsh/oh-my-zsh"
 
 # Cache files
 ZSH_CACHE="${HOME}/.cache/zsh"
