@@ -1,4 +1,9 @@
-- clean: ['~']
+- clean: ['~', '~/.config']
+
+- create:
+  - ~/.config
+  - ~/.cache
+  - ~/.local/share
 
 - link:
     ~/.dotfiles: ''
