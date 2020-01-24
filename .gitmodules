@@ -2,9 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "oh-my-zsh"]
-	path = oh-my-zsh
-	url = https://github.com/ohmyzsh/ohmyzsh.git
 [submodule "zsh/themes/powerlevel10k"]
 	path = zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
