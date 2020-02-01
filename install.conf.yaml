@@ -11,12 +11,14 @@
     ~/.config/shell: shell
     ~/.config/zsh: zsh
     ~/.config/git: git
+    ~/.config/python: python
     ~/.config/conda: conda
     ~/.config/jupyter: jupyter
     ~/.config/asdf: asdf
     ~/.config/ruby: ruby
     ~/.config/nodejs: nodejs
     ~/.config/npm: npm
+    ~/.config/go: go
     ~/.config/nvim: nvim
 
 - shell:

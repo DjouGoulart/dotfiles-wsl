@@ -1,0 +1,6 @@
+#!usr/bin/env bash
+
+##########################################################################
+## EXPORTS
+
+export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/python_history.py"

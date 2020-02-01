@@ -29,6 +29,11 @@ type git &>/dev/null && source "${XDG_CONFIG_HOME}/git/git-custom" || echo "[ALE
 [[ -d "/opt/asdf" ]]  && source "${XDG_CONFIG_HOME}/asdf/asdf-custom" ||  echo "[ALERT] config.init: asdf not found"
 
 ##########################################################################
+## PYTHON
+
+type python &>/dev/null && source "${XDG_CONFIG_HOME}/python/python-custom" || echo "[ALERT] config.init: python not found"
+
+##########################################################################
 ## CONDA
 
 type conda &>/dev/null && source "${XDG_CONFIG_HOME}/conda/conda-custom" || echo "[ALERT] config.init: conda not found"
@@ -47,3 +52,9 @@ type node &>/dev/null && source "${XDG_CONFIG_HOME}/nodejs/node-custom" || echo 
 ## NPM
 
 type npm &>/dev/null && source "${XDG_CONFIG_HOME}/npm/npm-custom" || echo "[ALERT] config.init: npm not found"
+
+##########################################################################
+## GOLANG
+
+type go &>/dev/null && source "${XDG_CONFIG_HOME}/go/go-custom" || echo "[ALERT] config.init: go not found"
+
