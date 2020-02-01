@@ -56,5 +56,5 @@ type npm &>/dev/null && source "${XDG_CONFIG_HOME}/npm/npm-custom" || echo "[ALE
 ##########################################################################
 ## GOLANG
 
-type go &>/dev/null && source "${XDG_CONFIG_HOME}/go/go-custom" || echo "[ALERT] config.init: go not found"
+#type go &>/dev/null && source "${XDG_CONFIG_HOME}/go/go-custom" || echo "[ALERT] config.init: go not found"
 
