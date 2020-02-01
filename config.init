@@ -19,6 +19,11 @@ source "${XDG_CONFIG_HOME}/shell/functions"
 [[ "${SHELL}" = "/usr/bin/zsh" ]] && source "${XDG_CONFIG_HOME}/zsh/omz-custom" 
 
 ##########################################################################
+## GIT
+
+type git &>/dev/null && source "${XDG_CONFIG_HOME}/git/git-custom" || echo "[ALERT] config.init: git not found"
+
+##########################################################################
 ## ASDF
 
 [[ -d "/opt/asdf" ]]  && source "${XDG_CONFIG_HOME}/asdf/asdf-custom" ||  echo "[ALERT] config.init: asdf not found"
