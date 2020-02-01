@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+OMZ_CUSTOM="${XDG_CONFIG_HOME}/zsh/omz-custom"
+
+alias omzaed="${EDITOR} ${OMZ_CUSTOM}"
+alias omzrel="source ${OMZ_CUSTOM}"
+
+# Path to your oh-my-zsh installation.
+export ZSH="${XDG_CONFIG_HOME}/zsh/oh-my-zsh"
+
+# Cache files
+ZSH_CACHE="${XDG_CACHE_HOME}/zsh"
+[[ ! -d "${ZSH_CACHE}" ]] && mkdir -pv "${ZSH_CACHE}"
+
+HISTFILE="${ZSH_CACHE}/history"
+ZSH_COMPDUMP="${ZSH_CACHE}/zcompdump-${ZSH_VERSION}"
+ZSH_CACHE_DIR="${ZSH_CACHE}"
+
+# Custom
+ZSH_CUSTOM="${XDG_CONFIG_HOME}/zsh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+ZSH_DISABLE_COMPFIX=true
+ZSH_TMUX_AUTOSTART=true
+
+ENABLE_CORRECTION="true"
+
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  extract
+  sudo
+  history
+  ssh-agent
+)
+
+source "${ZSH}/oh-my-zsh.sh"
+
+# P10k configs
+[[ ! -f "${ZSH_CUSTOM}/p10k.zsh" ]] || source "${ZSH_CUSTOM}/p10k.zsh"

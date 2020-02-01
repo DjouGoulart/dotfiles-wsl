@@ -15,7 +15,18 @@ function is_wsl() {
   return $(grep -q Microsoft /proc/version)
 }
 
-#function get_python_last_version() {
-#  local latest=$(asdf latest python)
-#  return 3.8
-#}
+## Quickly go back to a specific parent directory
+# Adapted from https://github.com/vigneshwaranr/bd
+function bd() {
+  local oldpwd=$(pwd)
+  
+  pattern=$1
+  local newpwd=$(echo $oldpwd | perl -pe 's|(.*/'$pattern'[^/]*/).*|$1|i')
+
+  if [ "$newpwd" = "$oldpwd" ]; then
+    echo "No such occurrence."
+  else
+    echo $newpwd
+    cd "$newpwd"
+  fi
+}

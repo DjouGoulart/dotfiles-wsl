@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+##########################################################################
+## XDG BASE DIRECTORY
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+
+##########################################################################
+## SHELL
+source "${XDG_CONFIG_HOME}/shell/exports"
+source "${XDG_CONFIG_HOME}/shell/aliases"
+source "${XDG_CONFIG_HOME}/shell/functions"
+
+##########################################################################
+## OH-MY-ZSH
+
+[[ "${SHELL}" = "/usr/bin/zsh" ]] && source "${XDG_CONFIG_HOME}/zsh/omz-custom" 
+
+##########################################################################
+## ASDF
+
+[[ -d "/opt/asdf" ]]  && source "${XDG_CONFIG_HOME}/asdf/asdf-custom" ||  echo "[ALERT] config.init: asdf not found"
+
+##########################################################################
+## CONDA
+
+type conda &>/dev/null && source "${XDG_CONFIG_HOME}/conda/conda-custom" || echo "[ALERT] config.init: conda not found"
+
+##########################################################################
+## RUBY
+
+type ruby &>/dev/null && source "${XDG_CONFIG_HOME}/ruby/ruby-custom" || echo "[ALERT] config.init: ruby not found"
+
+##########################################################################
+## NODE
+
+type node &>/dev/null && source "${XDG_CONFIG_HOME}/nodejs/node-custom" || echo "[ALERT] config.init: nodejs not found"
+
+##########################################################################
+## NPM
+
+type npm &>/dev/null && source "${XDG_CONFIG_HOME}/npm/npm-custom" || echo "[ALERT] config.init: npm not found"

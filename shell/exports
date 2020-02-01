@@ -1,21 +1,15 @@
 #!/usr/bin/env bash
 
+WIN_USER=$(cmd.exe /c "echo %USERNAME%" | sed -e 's/\r//g') 2> /dev/null
+
 ##########################################################################
 ## PATHS
-
-# XDG BASE DIRECTORY
-export XDG_CONFIG_HOME="${HOME}/.config"
-export XDG_CACHE_HOME="${HOME}/.cache"
-export XDG_DATA_HOME="${HOME}/.local/share"
-
-# WINDOWS DIRECTORIES
-WIN_USER=$(cmd.exe /c "echo %USERNAME%" | sed -e 's/\r//g') 2> /dev/null
 
 export WIN_ROOT="/mnt/c"
 export WIN_PF="${WIN_ROOT}/Program Files"
 export WIN_PF86="${WIN_ROOT}/Program Files (x86)"
 
-export WIN_PROFILES="/mnt/d"
+export WIN_PROFILES="/mnt/d/users"
 export WIN_HOME="${WIN_PROFILES}/${WIN_USER}"
 
 export STORAGE="/mnt/e"
@@ -32,6 +26,8 @@ export VISUAL="${WIN_PF}/Notepad++/notepad++.exe"
 
 ##########################################################################
 ## MISC
+
+export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 
 # set display to work with xterm
 export DISPLAY=:0

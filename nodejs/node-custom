@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+NODE_CUSTOM="${XDG_CONFIG_HOME}/node/node-custom"
+
+##########################################################################
+## EXPORTS
+
+alias nodeed="${EDITOR} ${NODE_CUSTOM}"
+alias noderel="source ${NODE_CUSTOM}"
+
+export NODE_REPL_HISTORY="${XDG_CACHE_HOME}/nodejs/node_repl_history"
+
+##########################################################################
+## ALIASES
+
+# alias to setup nodejs development environment
+alias node-dev='export NODE_ENV=development'
+
+# alias to setup nodejs production environment
+alias node-prod='export NODE_ENV=production'

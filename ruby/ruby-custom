@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+RUBY_CUSTOM="${XDG_CONFIG_HOME}/conda/conda-custom"
+
+##########################################################################
+## EXPORTS
+
+#export GEM_HOME="${XDG_DATA_HOME}/gem"
+#export GEM_PATH="${GEM_HOME}:${ASDF_DATA_DIR}/installs/ruby/2.7.0/lib/ruby/gems"
+export GEM_SPEC_CACHE="${XDG_CACHE_HOME}/gem/specs"
+export GEMRC="${XDG_CONFIG_HOME}/ruby/gemrc"
+
+##########################################################################
+## ALIASES
+
+alias rubyed="${EDITOR} ${RUBY_CUSTOM}"
+alias rubyrel="source ${RUBY_CUSTOM}"
+
+# colorls overwrite
+if type colorls &>/dev/null; then
+  alias ll="colorls -l -A --sd"
+  alias ls="colorls -A --sd"
+  alias ld="colorls -d -A"
+  alias lf="colorls -f -A"
+fi
+
+##########################################################################
+## FUNCTIONS

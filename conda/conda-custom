@@ -1,21 +1,37 @@
 #!/usr/bin/env bash
 
+CONDA_ENVS_BK_PATH="${PROJECTS}/conda_env_bk"
+CONDA_ROOT_DIR=$(conda info | grep "base env" | grep -o '/[^ ]*')
+CONDA_CUSTOM="${XDG_CONFIG_HOME}/conda/conda-custom"
+
 ##########################################################################
 ## EXPORTS
 
-#CONDA_ENVS_DIRS 
-#CONDA_PKGS_DIRS 
+# Conda
+export CONDARC="${XDG_CONFIG_HOME}/conda/condarc"
+export CONDA_ENVS_DIRS="${XDG_DATA_HOME}/conda/envs"
+export CONDA_PKGS_DIRS="${XDG_CACHE_HOME}/conda/pkgs"
 
-export CONDA_ENVS_BK_PATH="$PROJECTS/conda_env_bk"
-export CONDA_ROOT=$(conda info | grep "root env" | grep -o '/[^ ]*')
+# Jupyter
+#export IPYTHONDIR=
+
+export JUPYTER_CONFIG_DIR="${XDG_CONFIG_HOME}/jupyter"
+export JUPYTER_DATA_DIR="${XDG_DATA_HOME}/jupyter"
+export JUPYTER_RUNTIME_DIR="${XDG_CACHE_HOME}/jupyter"
+
+export JUPYTERLAB_SETTINGS_DIR="${XDG_CONFIG_HOME}/jupyter/user-settings"
+export JUPYTERLAB_WORKSPACES_DIR="${XDG_CACHE_HOME}/jupyter/workspaces"
 
 ##########################################################################
 ## ALIASES
 
+alias condaed="${EDITOR} ${CONDA_CUSTOM}"
+alias condarel="source ${CONDA_CUSTOM}"
+
 alias ccr="conda create"
 alias cer="conda env remove"
-alias cac="source $CONDA_ROOT/bin/activate"
-alias cde="source $CONDA_ROOT/bin/deactivate"
+alias cac="source ${CONDA_ROOT_DIR}/bin/activate"
+alias cde="conda deactivate"
 alias cin="conda install"
 alias cee="conda env export"
 alias ceefh="cee --from-history"
@@ -23,28 +39,26 @@ alias cel="conda env list"
 
 #alias cinlt="conda install python=$(get_python_last_version)"
 
-alias condaed="$EDITOR ~/.conda-custom"
-alias condarel="source ~/.conda-custom"
-
 ##########################################################################
 ## FUNCTIONS
 
 function conda-backup-envs {
   local NOW=$(date "+%Y-%m-%d")
-  local BK_PATH="$CONDA_ENVS_BK_PATH/envs-$NOW"
+  local BK_PATH="${CONDA_ENVS_BK_PATH}/envs-${NOW}"
   local ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
   mkdir $BK_PATH
 
   for ENV in $ENVS; do
     echo "Exporting $ENV"
-    cac $ENV
-    ceefh > $BK_PATH/$ENV.yml
+    cac "${ENV}"
+    ceefh > "${BK_PATH}/${ENV}.yml"
     cde
   done
 }
 
 function conda-restore-envs {
   #TODO
+  return
 }
 
 function jupyter-lab {

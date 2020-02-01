@@ -7,12 +7,18 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.config/config.init: config.init
     ~/.config/shell: shell
     ~/.config/zsh: zsh
-    ~/.zshenv: zsh/zshenv
     ~/.config/git: git
     ~/.config/conda: conda
     ~/.config/jupyter: jupyter
+    ~/.config/asdf: asdf
+    ~/.config/ruby: ruby
+    ~/.config/nodejs: nodejs
+    ~/.config/npm: npm
+    ~/.config/nvim: nvim
 
 - shell:
     - git submodule update --init --recursive
+    - grep ZDOTDIR /etc/zsh/zshenv || sudo sh -c "echo \"\nexport ZDOTDIR=\"${HOME}/.config/zsh\"\" >> /etc/zsh/zshenv"

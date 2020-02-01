@@ -14,3 +14,9 @@
 [submodule "zsh/oh-my-zsh"]
 	path = zsh/oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "nvim/plugged/gruvbox"]
+	path = nvim/plugged/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "nvim/plugged/nerdtree"]
+	path = nvim/plugged/nerdtree
+	url = https://github.com/preservim/nerdtree

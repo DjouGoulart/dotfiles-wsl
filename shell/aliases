@@ -11,7 +11,7 @@ alias ~prj="cd ${PROJECTS}"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias ....."cd ../../../.."
+alias .....="cd ../../../.."
 alias -- -="cd -"
 
 ##########################################################################
@@ -22,14 +22,6 @@ alias sudo="sudo "
 
 # Create and notify any necessary parent folder
 alias mkdir="mkdir -pv"
-
-# colorls overwrite
-if type colorls >/dev/null; then
-  alias ll="colorls -l -A --sd"
-  alias ls="colorls -A --sd"
-  alias ld="colorls -d -A"
-  alias lf="colorls -f -A"
-fi
 
 # Copy with progress bar
 alias cpv="rsync -ah --info=progress2"
@@ -43,15 +35,9 @@ alias ipconfig="cmd.exe /c ipconfig"
 
 ##########################################################################
 ## CONFIG FILES
-
-# Reloads the zshrc file
-alias zshrel="source ~/.zshrc && echo ZSH config reloaded"
-
-alias zshrced="${EDITOR} ~/.zshrc"
-alias exportsed="${EDITOR} ~/.shell/exports"
-alias aliasesed="${EDITOR} ~/.shell/aliases"
-alias functionsed="${EDITOR} ~/.shell/functions"
-alias p10ked="${EDITOR} ~/.p10k.zsh"
+alias exportsed="${EDITOR} ${XDG_CONFIG_HOME}/shell/exports"
+alias aliasesed="${EDITOR} ${XDG_CONFIG_HOME}/shell/aliases"
+alias functionsed="${EDITOR} ${XDG_CONFIG_HOME}/shell/functions"
 
 ##########################################################################
 ## PROGRAMS
