@@ -58,3 +58,7 @@ type npm &>/dev/null && source "${XDG_CONFIG_HOME}/npm/npm-custom" || echo "[ALE
 
 #type go &>/dev/null && source "${XDG_CONFIG_HOME}/go/go-custom" || echo "[ALERT] config.init: go not found"
 
+##########################################################################
+## DOCKER
+
+type docker &>/dev/null && source "${XDG_CONFIG_HOME}/docker/docker-custom" || echo "[ALERT] config.init: docker not found"

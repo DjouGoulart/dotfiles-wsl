@@ -20,6 +20,7 @@
     ~/.config/npm: npm
     ~/.config/go: go
     ~/.config/nvim: nvim
+    ~/.config/docker: docker
 
 - shell:
     - git submodule update --init --recursive
