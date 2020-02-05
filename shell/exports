@@ -27,6 +27,9 @@ export VISUAL="${WIN_PF}/Notepad++/notepad++.exe"
 ##########################################################################
 ## MISC
 
+# openssl
+export RANDFILE="${XDG_DATA_HOME}/openssl/rnd"
+
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 
 # set display to work with xterm
