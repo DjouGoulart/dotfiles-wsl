@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
+ZSH_CUSTOM="${XDG_CONFIG_HOME}/zsh/omz-custom"
 
-OMZ_CUSTOM="${XDG_CONFIG_HOME}/zsh/omz-custom"
-
-alias omzaed="${EDITOR} ${OMZ_CUSTOM}"
-alias omzrel="source ${OMZ_CUSTOM}"
+alias zshed="${EDITOR} ${ZSH_CUSTOM}"
+alias zshrel="source ${ZSH_CUSTOM}"
 
 # Path to your oh-my-zsh installation.
 export ZSH="${XDG_CONFIG_HOME}/zsh/oh-my-zsh"

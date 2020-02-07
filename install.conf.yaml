@@ -10,6 +10,7 @@
     ~/.config/config.init: config.init
     ~/.config/shell: shell
     ~/.config/zsh: zsh
+    ~/.config/tmux: tmux
     ~/.config/git: git
     ~/.config/python: python
     ~/.config/conda: conda

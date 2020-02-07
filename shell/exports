@@ -21,7 +21,7 @@ export PROJECTS="${STORAGE}/Projetos"
 
 export BROWSER="${WIN_PF86}/Google/Chrome/Application/chrome.exe"
 export EDITOR=nvim
-export VISUAL="${WIN_PF}/Notepad++/notepad++.exe"
+export VISUAL=nvim
 #export PAGER
 
 ##########################################################################
@@ -34,3 +34,6 @@ export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 
 # set display to work with xterm
 export DISPLAY=:0
+
+##########################################################################
+unset WIN_USER

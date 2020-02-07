@@ -9,6 +9,7 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 
 ##########################################################################
 ## SHELL
+
 source "${XDG_CONFIG_HOME}/shell/exports"
 source "${XDG_CONFIG_HOME}/shell/aliases"
 source "${XDG_CONFIG_HOME}/shell/functions"
@@ -16,7 +17,12 @@ source "${XDG_CONFIG_HOME}/shell/functions"
 ##########################################################################
 ## OH-MY-ZSH
 
-[[ "${SHELL}" = "/usr/bin/zsh" ]] && source "${XDG_CONFIG_HOME}/zsh/omz-custom" 
+[[ "${SHELL}" =~ "zsh" ]] && source "${XDG_CONFIG_HOME}/zsh/omz-custom" 
+
+##########################################################################
+## TMUX
+
+type tmux &>/dev/null && source "${XDG_CONFIG_HOME}/tmux/tmux-custom" || echo "[ALERT] config.init: tmux not found"
 
 ##########################################################################
 ## GIT
