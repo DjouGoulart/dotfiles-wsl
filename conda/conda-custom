@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-CONDA_ENVS_BK_PATH="${PROJECTS}/conda_env_bk"
 CONDA_ROOT_DIR=$(conda info | grep "base env" | grep -o '/[^ ]*')
 
 ##########################################################################
@@ -32,32 +31,13 @@ alias cee="conda env export"
 alias ceefh="cee --from-history"
 alias cel="conda env list"
 
-#alias cinlt="conda install python=$(get_python_last_version)"
-
 ##########################################################################
 ## FUNCTIONS
-
-function conda-backup-envs {
-  local NOW=$(date "+%Y-%m-%d")
-  local BK_PATH="${CONDA_ENVS_BK_PATH}/envs-${NOW}"
-  local ENVS=$(conda env list | grep '^\w' | cut -d' ' -f1)
-  mkdir $BK_PATH
-
-  for ENV in $ENVS; do
-    echo "Exporting $ENV"
-    cac "${ENV}"
-    ceefh > "${BK_PATH}/${ENV}.yml"
-    cde
-  done
-}
-
-function conda-restore-envs {
-  #TODO
-  return
-}
 
 function jupyter-lab {
   cac jupyter
   jupyter lab
   cde
 }
+
+unset CONDA_ROOT_DIR

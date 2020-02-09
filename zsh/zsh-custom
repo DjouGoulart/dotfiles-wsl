@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-ZSH_CUSTOM="${XDG_CONFIG_HOME}/zsh/omz-custom"
-
-alias zshed="${EDITOR} ${ZSH_CUSTOM}"
-alias zshrel="source ${ZSH_CUSTOM}"
 
 # Path to your oh-my-zsh installation.
 export ZSH="${XDG_CONFIG_HOME}/zsh/oh-my-zsh"
@@ -20,18 +16,16 @@ ZSH_CUSTOM="${XDG_CONFIG_HOME}/zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ZSH_DISABLE_COMPFIX=true
-#ZSH_TMUX_AUTOSTART=true
 
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
-  extract
   sudo
   history
-  ssh-agent
+#  ssh-agent
 )
 
 source "${ZSH}/oh-my-zsh.sh"

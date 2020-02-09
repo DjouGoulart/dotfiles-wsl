@@ -39,4 +39,4 @@ alias xsrv="'${WIN_PF}/Mobatek/MobaXterm/MobaXterm.exe' & "
 alias chrome="cmd.exe /c start chrome"
 alias chromei="cmd.exe /c start chrome -incognito"
 alias explorer="cmd.exe /c start explorer ."
-
+alias npp="cmd.exe /c start notepad++"
