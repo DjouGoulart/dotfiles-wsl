@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 
-GIT_CUSTOM="${XDG_CONFIG_HOME}/git/git-custom"
-
 ##########################################################################
 ## EXPORTS
 
 
 ##########################################################################
 ## ALIASES
-
-alias gited="${EDITOR} ${GIT_CUSTOM}"
-alias gitrel="source ${GIT_CUSTOM}"
 
 alias gcl='git clone'
 alias ga='git add'

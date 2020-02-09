@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-DOCKER_CUSTOM="${XDG_CONFIG_HOME}/docker/docker-custom"
-
 ##########################################################################
 ## EXPORTS
 
@@ -14,5 +12,3 @@ export DOCKER_CERT_PATH="${STORAGE}/ssl/docker"
 ##########################################################################
 ## ALIASES
 
-alias dockered="${EDITOR} ${DOCKER_CUSTOM}"
-alias dockerrel="source ${DOCKER_CUSTOM}"

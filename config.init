@@ -10,14 +10,12 @@ export XDG_RUNTIME_DIR="/run/user/$(id -u)"
 ##########################################################################
 ## SHELL
 
-source "${XDG_CONFIG_HOME}/shell/exports"
-source "${XDG_CONFIG_HOME}/shell/aliases"
-source "${XDG_CONFIG_HOME}/shell/functions"
+source "${XDG_CONFIG_HOME}/shell/shell-custom"
 
 ##########################################################################
 ## OH-MY-ZSH
 
-[[ "${SHELL}" =~ "zsh" ]] && source "${XDG_CONFIG_HOME}/zsh/omz-custom" 
+[[ "${SHELL}" =~ "zsh" ]] && source "${XDG_CONFIG_HOME}/zsh/zsh-custom" 
 
 ##########################################################################
 ## TMUX
@@ -52,7 +50,7 @@ type ruby &>/dev/null && source "${XDG_CONFIG_HOME}/ruby/ruby-custom" || echo "[
 ##########################################################################
 ## NODE
 
-type node &>/dev/null && source "${XDG_CONFIG_HOME}/nodejs/node-custom" || echo "[ALERT] config.init: nodejs not found"
+type node &>/dev/null && source "${XDG_CONFIG_HOME}/node/node-custom" || echo "[ALERT] config.init: nodejs not found"
 
 ##########################################################################
 ## NPM

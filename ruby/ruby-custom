@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-RUBY_CUSTOM="${XDG_CONFIG_HOME}/conda/conda-custom"
-
 ##########################################################################
 ## EXPORTS
 
@@ -12,9 +10,6 @@ export GEMRC="${XDG_CONFIG_HOME}/ruby/gemrc"
 
 ##########################################################################
 ## ALIASES
-
-alias rubyed="${EDITOR} ${RUBY_CUSTOM}"
-alias rubyrel="source ${RUBY_CUSTOM}"
 
 # colorls overwrite
 if type colorls &>/dev/null; then

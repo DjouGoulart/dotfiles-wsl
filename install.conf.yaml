@@ -17,7 +17,7 @@
     ~/.config/jupyter: jupyter
     ~/.config/asdf: asdf
     ~/.config/ruby: ruby
-    ~/.config/nodejs: nodejs
+    ~/.config/node: node
     ~/.config/npm: npm
     ~/.config/go: go
     ~/.config/nvim: nvim

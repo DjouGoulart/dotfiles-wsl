@@ -30,3 +30,30 @@ function bd() {
     cd "$newpwd"
   fi
 }
+
+function config() {
+  local action="$1"
+  local tool="$2"
+  local file="${3:-"${tool}-custom"}"
+  local tool_file="${XDG_CONFIG_HOME}/${tool}/${file}"
+
+  if [[ -f "${tool_file}" ]]; then
+    
+    case "${action}" in
+      "edit"|"ed")
+        ${EDITOR} ${tool_file}
+        ;;
+      "reload"|"rel")
+        source "${tool_file}"
+        echo "${tool} reloaded!"
+        ;;
+      *)
+        echo "[ERROR] Invalid action: ${action}. Expected edit or reload."
+        ;;
+    esac
+
+  else
+    echo "[ERROR] File not found: ${tool_file}"
+  fi
+}
+

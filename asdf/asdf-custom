@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-ASDF_CUSTOM="${XDG_CONFIG_HOME}/asdf/asdf-custom"
-
 ##########################################################################
 ## EXPORTS
 
@@ -12,12 +10,12 @@ export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
 ##########################################################################
 ## ALIASES
 
-alias asdfed="${EDITOR} ${ASDF_CUSTOM}"
-alias asdfrel="source ${ASDF_CUSTOM}"
 
 ##########################################################################
 ## FUNCTIONS
 
+
+# Start ASDF
 if [[ -d "/opt/asdf" ]]; then
   source "/opt/asdf/asdf.sh"
   source "/opt/asdf/completions/asdf.bash"

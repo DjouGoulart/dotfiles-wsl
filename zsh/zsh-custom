@@ -20,7 +20,7 @@ ZSH_CUSTOM="${XDG_CONFIG_HOME}/zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 ZSH_DISABLE_COMPFIX=true
-ZSH_TMUX_AUTOSTART=true
+#ZSH_TMUX_AUTOSTART=true
 
 ENABLE_CORRECTION="true"
 
@@ -38,3 +38,6 @@ source "${ZSH}/oh-my-zsh.sh"
 
 # P10k configs
 [[ ! -f "${ZSH_CUSTOM}/p10k.zsh" ]] || source "${ZSH_CUSTOM}/p10k.zsh"
+
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none

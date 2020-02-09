@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+source "${XDG_CONFIG_HOME}/shell/exports"
+source "${XDG_CONFIG_HOME}/shell/aliases"
+source "${XDG_CONFIG_HOME}/shell/functions"

@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-
 CONDA_ENVS_BK_PATH="${PROJECTS}/conda_env_bk"
 CONDA_ROOT_DIR=$(conda info | grep "base env" | grep -o '/[^ ]*')
-CONDA_CUSTOM="${XDG_CONFIG_HOME}/conda/conda-custom"
 
 ##########################################################################
 ## EXPORTS
@@ -24,9 +22,6 @@ export JUPYTERLAB_WORKSPACES_DIR="${XDG_CACHE_HOME}/jupyter/workspaces"
 
 ##########################################################################
 ## ALIASES
-
-alias condaed="${EDITOR} ${CONDA_CUSTOM}"
-alias condarel="source ${CONDA_CUSTOM}"
 
 alias ccr="conda create"
 alias cer="conda env remove"

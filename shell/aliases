@@ -34,12 +34,6 @@ alias myip="curl ipinfo.io/ip"
 alias ipconfig="cmd.exe /c ipconfig"
 
 ##########################################################################
-## CONFIG FILES
-alias exportsed="${EDITOR} ${XDG_CONFIG_HOME}/shell/exports"
-alias aliasesed="${EDITOR} ${XDG_CONFIG_HOME}/shell/aliases"
-alias functionsed="${EDITOR} ${XDG_CONFIG_HOME}/shell/functions"
-
-##########################################################################
 ## PROGRAMS
 alias xsrv="'${WIN_PF}/Mobatek/MobaXterm/MobaXterm.exe' & "
 alias chrome="cmd.exe /c start chrome"

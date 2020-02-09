@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 
-NODE_CUSTOM="${XDG_CONFIG_HOME}/node/node-custom"
-
 ##########################################################################
 ## EXPORTS
 
-alias nodeed="${EDITOR} ${NODE_CUSTOM}"
-alias noderel="source ${NODE_CUSTOM}"
-
-export NODE_REPL_HISTORY="${XDG_CACHE_HOME}/nodejs/node_repl_history"
+export NODE_REPL_HISTORY="${XDG_CACHE_HOME}/node/node_repl_history"
 
 ##########################################################################
 ## ALIASES

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-NPM_CUSTOM="${XDG_CONFIG_HOME}/npm/npm-custom"
-
 ##########################################################################
 ## EXPORTS
 
@@ -9,9 +7,6 @@ export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
 
 ##########################################################################
 ## ALIASES
-
-alias npmed="${EDITOR} ${NPM_CUSTOM}"
-alias npmrel="source ${NPM_CUSTOM}"
 
 alias ni='npm install'
 alias nis='npm install --save'
